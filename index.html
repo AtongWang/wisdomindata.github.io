@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisdom in Data - Multi-Agent LLM Data Factory</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-brain me-2"></i>
+                Wisdom in Data
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#architecture">Architecture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#demo">Demo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#research">Research</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold text-white mb-4">
+                        Multi-Agent LLM-Based Data Factory
+                    </h1>
+                    <p class="lead text-white-50 mb-4">
+                        Revolutionizing Table Question Answering through coordinated collaboration between specialized agents. 
+                        Transform structured data into actionable insights with our advanced multi-agent framework.
+                    </p>
+                    <div class="hero-stats row text-center mb-4">
+                        <div class="col-4">
+                            <div class="stat-item">
+                                <h3 class="text-primary fw-bold">15.9%</h3>
+                                <p class="text-white-50">Accuracy Improvement</p>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="stat-item">
+                                <h3 class="text-primary fw-bold">28.6%</h3>
+                                <p class="text-white-50">Performance Gain</p>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="stat-item">
+                                <h3 class="text-primary fw-bold">3</h3>
+                                <p class="text-white-50">Specialized Teams</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <a href="#demo" class="btn btn-primary btn-lg">
+                            <i class="fas fa-play me-2"></i>Watch Demo
+                        </a>
+                        <a href="#architecture" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-info-circle me-2"></i>Learn More
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <img src="logo.png" alt="Wisdom in Data Platform" class="img-fluid rounded shadow-lg hero-logo-enhanced">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Preview Section -->
+    <section id="platform-preview" class="py-5 bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-4">
+          <div class="col-lg-10 text-center">
+            <h2 class="display-6 fw-bold mb-3">Platform Interface Preview</h2>
+            <p class="lead text-muted mb-4">A real screenshot of the Wisdom in Data platform, demonstrating the intuitive and powerful user interface for data analysis and management.</p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="platform-preview-card">
+              <img src="web-page.png" alt="Wisdom in Data Platform UI" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="display-5 fw-bold mb-3">Key Features</h2>
+                    <p class="lead text-muted">
+                        Our multi-agent framework addresses critical limitations in existing TableQA methods
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-database text-primary"></i>
+                        </div>
+                        <h4>Automated Data Ingestion</h4>
+                        <p>LLM-driven table property analysis and automated data ingestion with intelligent DDL generation and data quality assessment.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-project-diagram text-primary"></i>
+                        </div>
+                        <h4>Knowledge Graph Construction</h4>
+                        <p>Automated "data-to-knowledge graph" transformation algorithm for enhanced relational representation and semantic analysis.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain text-primary"></i>
+                        </div>
+                        <h4>Multi-Agent Collaboration</h4>
+                        <p>Coordinated Database and Knowledge Graph teams orchestrated by a Data Leader using the ReAct paradigm.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt text-primary"></i>
+                        </div>
+                        <h4>Hallucination Reduction</h4>
+                        <p>Comprehensive contextual information and few-shot prompting to minimize model hallucinations and improve accuracy.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line text-primary"></i>
+                        </div>
+                        <h4>Advanced Reasoning</h4>
+                        <p>Sophisticated multi-step reasoning combining structured and relational retrieval methods for complex queries.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-robot text-primary"></i>
+                        </div>
+                        <h4>Autonomous Pipeline</h4>
+                        <p>Fully autonomous pipeline enabling seamless user-table interaction with intelligent visualization generation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section id="architecture" class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="display-5 fw-bold mb-3">System Architecture</h2>
+                    <p class="lead text-muted">
+                        Our tripartite collaborative architecture designed for efficient and accurate TableQA
+                    </p>
+                </div>
+            </div>
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <div class="architecture-img-card">
+                        <img src="data_factory.png" alt="Data Factory Architecture" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-4">Multi-Agent Data Factory</h3>
+                    <div class="architecture-component mb-4">
+                        <h5><i class="fas fa-crown text-warning me-2"></i>Data Leader</h5>
+                        <p>The cognitive core using ReAct paradigm for dynamic reasoning, planning, and task decomposition.</p>
+                    </div>
+                    <div class="architecture-component mb-4">
+                        <h5><i class="fas fa-database text-info me-2"></i>Database Team</h5>
+                        <p>Expert team for structured data processing, numerical computation, and SQL-based queries.</p>
+                    </div>
+                    <div class="architecture-component">
+                        <h5><i class="fas fa-network-wired text-success me-2"></i>Knowledge Graph Team</h5>
+                        <p>Specialized team for relational knowledge processing and Cypher-based graph queries.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Workflow Phases -->
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="workflow-card">
+                        <div class="workflow-number">1</div>
+                        <h4>Information Storage</h4>
+                        <p>Automated data ingestion and knowledge graph construction with LLM-driven analysis.</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>Table property analysis</li>
+                            <li><i class="fas fa-check text-success me-2"></i>DDL generation</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Entity extraction</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="workflow-card">
+                        <div class="workflow-number">2</div>
+                        <h4>Knowledge Extraction</h4>
+                        <p>Context-enhanced SQL and Cypher query generation with historical QA integration.</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>Context enhancement</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Few-shot prompting</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Domain knowledge injection</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="workflow-card">
+                        <div class="workflow-number">3</div>
+                        <h4>Insight Generation</h4>
+                        <p>ReAct-based reasoning with multi-step analysis and comprehensive answer synthesis.</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>Multi-step reasoning</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Team coordination</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Answer synthesis</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="display-5 fw-bold mb-5">Platform Demonstration</h2>
+                    <p class="lead text-muted">
+                        Comprehensive demonstrations showcasing our multi-agent data factory capabilities
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Data Import Process -->
+            <div class="demo-video-section mb-5">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h3 class="text-center mb-4">
+                            <i class="fas fa-upload text-primary me-2"></i>
+                            Data Import Process
+                        </h3>
+                        <div class="video-card mb-4">
+                            <iframe src="https://www.youtube.com/embed/rdAI12W1iwo" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-explanation">
+                            <h5>Methodology Overview</h5>
+                            <p>This demonstration showcases the <strong>Database Information Processing Agent</strong> in action, implementing our automated data ingestion pipeline. The process follows the three-stage workflow outlined in our methodology:</p>
+                            <ul>
+                                <li><strong>Table Property Analysis:</strong> LLM-driven analysis of table headers, field names, and data types</li>
+                                <li><strong>DDL Generation:</strong> Automated creation of optimized database schemas with intelligent constraint generation</li>
+                                <li><strong>Data Quality Assessment:</strong> Comprehensive validation including missing value detection and data format consistency checks</li>
+                            </ul>
+                            <p>The video demonstrates how our system transforms raw CSV data into structured database records, establishing the foundation for subsequent knowledge extraction and analysis phases.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DDL Generation -->
+            <div class="demo-video-section mb-5">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h3 class="text-center mb-4">
+                            <i class="fas fa-code text-primary me-2"></i>
+                            DDL Generation Process
+                        </h3>
+                        <div class="video-card mb-4">
+                            <iframe src="https://www.youtube.com/embed/oVRNeAY0TWU" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-explanation">
+                            <h5>Automated Schema Design</h5>
+                            <p>This video illustrates the <strong>intelligent DDL generation</strong> component of our Database Information Processing Agent. The system employs advanced algorithms to:</p>
+                            <ul>
+                                <li><strong>Data Type Inference:</strong> Automatic recognition of numeric, text, date, and boolean fields using statistical analysis and LLM understanding</li>
+                                <li><strong>Constraint Optimization:</strong> Intelligent recommendation of primary keys, foreign keys, and indexes for optimal query performance</li>
+                                <li><strong>Schema Validation:</strong> Comprehensive verification of generated schemas against data integrity requirements</li>
+                            </ul>
+                            <p>The automated DDL generation eliminates manual database design overhead while ensuring optimal performance for subsequent SQL-based queries.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data QA -->
+            <div class="demo-video-section mb-5">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h3 class="text-center mb-4">
+                            <i class="fas fa-question-circle text-primary me-2"></i>
+                            Data Question Answering
+                        </h3>
+                        <div class="video-card mb-4">
+                            <iframe src="https://www.youtube.com/embed/4Srmu_E0bBw" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-explanation">
+                            <h5>Context-Enhanced SQL Generation</h5>
+                            <p>This demonstration showcases the <strong>Database Information Retrieval Agent</strong> implementing our context-enhanced prompting strategy. The system demonstrates:</p>
+                            <ul>
+                                <li><strong>Historical QA Integration:</strong> Retrieval of similar historical queries and their corresponding SQL statements for context enhancement</li>
+                                <li><strong>Few-Shot Prompting:</strong> Dynamic selection of relevant examples to guide LLM SQL generation</li>
+                                <li><strong>Domain Knowledge Injection:</strong> Integration of business rules and domain-specific calculation formulas</li>
+                                <li><strong>Multi-source Information Fusion:</strong> Seamless combination of user queries, database schema, and external knowledge</li>
+                            </ul>
+                            <p>The video shows how our approach achieves superior accuracy compared to traditional methods by leveraging comprehensive contextual information.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Visualization -->
+            <div class="demo-video-section mb-5">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h3 class="text-center mb-4">
+                            <i class="fas fa-chart-bar text-primary me-2"></i>
+                            Data Visualization Generation
+                        </h3>
+                        <div class="video-card mb-4">
+                            <iframe src="https://www.youtube.com/embed/tpPrafQVYjA" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-explanation">
+                            <h5>Automated Chart Generation</h5>
+                            <p>This video demonstrates the <strong>Database Visualization Agent</strong> capabilities, showcasing our automated chart generation system. The process includes:</p>
+                            <ul>
+                                <li><strong>User Intent Analysis:</strong> LLM-based understanding of visualization requirements from natural language queries</li>
+                                <li><strong>Chart Type Selection:</strong> Intelligent determination of appropriate visualization types (trends, distributions, comparisons)</li>
+                                <li><strong>Python Code Generation:</strong> Automated generation of plotting code using libraries like matplotlib and seaborn</li>
+                                <li><strong>Interactive Display:</strong> Web-based presentation with interactive exploration capabilities</li>
+                            </ul>
+                            <p>The system transforms complex analytical results into intuitive visual representations, enhancing user understanding and data exploration.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Knowledge Graph Construction -->
+            <div class="demo-video-section mb-5">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h3 class="text-center mb-4">
+                            <i class="fas fa-project-diagram text-primary me-2"></i>
+                            Knowledge Graph Construction
+                        </h3>
+                        <div class="video-card mb-4">
+                            <iframe src="https://www.youtube.com/embed/zwjGTjmBCBU" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-explanation">
+                            <h5>Data-to-Knowledge Graph Transformation</h5>
+                            <p>This demonstration showcases our core innovation: the <strong>Knowledge Graph Information Processing Agent</strong> implementing the automated "data-to-knowledge graph" transformation algorithm. The process follows our formalized mapping function:</p>
+                            <ul>
+                                <li><strong>Entity Construction:</strong> Implementation of entity identifier generation and split-based entity construction strategies</li>
+                                <li><strong>Relationship Discovery:</strong> Intra-row and cross-row relationship matching using multi-pattern rule evaluation</li>
+                                <li><strong>LLM-based Strategy Generation:</strong> One-time semantic analysis for entity type and relationship pattern definition</li>
+                                <li><strong>Parallel Graph Construction:</strong> Efficient in-memory computation with batch persistence to Neo4j</li>
+                            </ul>
+                            <p>The video demonstrates how flat tabular data is transformed into semantically rich relational networks supporting complex reasoning tasks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KG Visualization -->
+            <div class="demo-video-section mb-5">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h3 class="text-center mb-4">
+                            <i class="fas fa-eye text-primary me-2"></i>
+                            Knowledge Graph Visualization
+                        </h3>
+                        <div class="video-card mb-4">
+                            <iframe src="https://www.youtube.com/embed/R89Z0o915zk" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-explanation">
+                            <h5>Interactive Graph Exploration</h5>
+                            <p>This video demonstrates the <strong>Knowledge Graph Visualization Agent</strong> capabilities, showcasing interactive knowledge graph exploration and analysis. The system provides:</p>
+                            <ul>
+                                <li><strong>Dynamic Subgraph Generation:</strong> Real-time creation of knowledge graph subgraphs based on query results</li>
+                                <li><strong>Interactive Navigation:</strong> User-friendly exploration of entity relationships and network structures</li>
+                                <li><strong>Visual Pattern Recognition:</strong> Intuitive display of collaboration networks and semantic relationships</li>
+                                <li><strong>Web-based Interface:</strong> Seamless integration with the overall platform for enhanced user experience</li>
+                            </ul>
+                            <p>The visualization capabilities enable users to discover hidden patterns and relationships that are difficult to identify through traditional data analysis methods.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KG Question Answering -->
+            <div class="demo-video-section mb-5">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h3 class="text-center mb-4">
+                            <i class="fas fa-search text-primary me-2"></i>
+                            Knowledge Graph Question Answering
+                        </h3>
+                        <div class="video-card mb-4">
+                            <iframe src="https://www.youtube.com/embed/XCWJ5V2IMh4" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-explanation">
+                            <h5>Complex Relational Reasoning</h5>
+                            <p>This demonstration showcases the <strong>Knowledge Graph Information Retrieval Agent</strong> performing complex reasoning through Cypher-based graph queries. The system demonstrates:</p>
+                            <ul>
+                                <li><strong>Multi-hop Path Planning:</strong> Intelligent traversal of complex relationship networks for multi-step reasoning</li>
+                                <li><strong>Context-Enhanced Cypher Generation:</strong> Integration of graph schema, few-shot examples, and external knowledge</li>
+                                <li><strong>Semantic Relationship Discovery:</strong> Identification of indirect associations and hidden connections between entities</li>
+                                <li><strong>Pattern Matching:</strong> Advanced graph query capabilities for discovering complex collaboration patterns</li>
+                            </ul>
+                            <p>The video illustrates how our knowledge graph approach enables sophisticated reasoning that goes beyond simple structured data queries.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Multi-Agent Collaboration -->
+            <div class="demo-video-section mb-5">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h3 class="text-center mb-4">
+                            <i class="fas fa-users text-primary me-2"></i>
+                            Multi-Agent Collaboration
+                        </h3>
+                        <div class="video-card mb-4">
+                            <iframe src="https://www.youtube.com/embed/NdJ5UBcNZnc" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-explanation">
+                            <h5>Coordinated Team Orchestration</h5>
+                            <p>This final demonstration showcases the <strong>Data Leader</strong> orchestrating the complete multi-agent collaboration using the ReAct paradigm. The video illustrates:</p>
+                            <ul>
+                                <li><strong>Three-Stage Principle:</strong> Implementation of "explore-verify-analyze" methodology for complex query decomposition</li>
+                                <li><strong>Dynamic Team Dispatch:</strong> Intelligent delegation between Database Team and Knowledge Graph Team based on task requirements</li>
+                                <li><strong>Iterative Reasoning:</strong> ReAct cycle implementation with thought-action-observation phases</li>
+                                <li><strong>Comprehensive Synthesis:</strong> Integration of multi-source information for final answer generation</li>
+                            </ul>
+                            <p>The video demonstrates how our tripartite architecture achieves superior performance through specialized team coordination and intelligent task decomposition.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="display-5 fw-bold mb-3">Research Results</h2>
+                    <p class="lead text-muted">
+                        Comprehensive evaluation across multiple benchmarks and model providers
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="research-card">
+                        <h4>Performance Comparison</h4>
+                        <div class="performance-stats">
+                            <div class="stat-row">
+                                <span>TabFact Accuracy Improvement</span>
+                                <span class="stat-value">+15.9%</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>WikiTQ Performance Gain</span>
+                                <span class="stat-value">+28.6%</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>FeTaQA Rouge-2 F Score</span>
+                                <span class="stat-value">0.3885</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="research-card">
+                        <h4>Model Compatibility</h4>
+                        <p>Tested across 8 LLMs from 5 providers including:</p>
+                        <ul class="model-list">
+                            <li><i class="fas fa-check text-success me-2"></i>Claude 4.0 Sonnet</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Gemini 2.5 Flash</li>
+                            <li><i class="fas fa-check text-success me-2"></i>GPT-4o Mini</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Qwen3 Series</li>
+                            <li><i class="fas fa-check text-success me-2"></i>DeepSeek-V3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 Wisdom in Data. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Multi-Agent LLM-Based Data Factory for Enhanced Table Question Answering</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
