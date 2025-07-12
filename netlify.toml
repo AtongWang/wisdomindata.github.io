@@ -1,8 +1,8 @@
 [build]
   # 不需要构建命令，因为是静态文件
   command = ""
-  # 发布目录是根目录
-  publish = "/"
+  # 发布目录是项目根目录
+  publish = "."
 
 # 可选：设置重定向规则
 [[redirects]]
