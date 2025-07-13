@@ -286,13 +286,13 @@
                         </div>
                         <div class="video-explanation">
                             <h5>Methodology Overview</h5>
-                            <p>This demonstration showcases the <strong>Database Information Processing Agent</strong> in action, implementing our automated data ingestion pipeline. The process follows the three-stage workflow outlined in our methodology:</p>
+                            <p>This demonstration shows how the <strong>Database Information Processing Agent</strong> imports CSV and Excel files into the database. The agent intelligently analyzes the number and structure of title/header rows, automatically detects and processes merged headers, and extracts each column's data for cleaning. It then provides detailed analysis for each column, including recommended field names, types, primary key status, and the reasoning behind each suggestion. The user only needs to intervene at key steps; the rest of the process is fully automated, making data import seamless and efficient.</p>
                             <ul>
-                                <li><strong>Table Property Analysis:</strong> LLM-driven analysis of table headers, field names, and data types</li>
-                                <li><strong>DDL Generation:</strong> Automated creation of optimized database schemas with intelligent constraint generation</li>
-                                <li><strong>Data Quality Assessment:</strong> Comprehensive validation including missing value detection and data format consistency checks</li>
+                                <li><strong>Intelligent Header Recognition:</strong> Automatic detection of title/header rows and handling of complex merged headers</li>
+                                <li><strong>Field Analysis:</strong> Extraction and cleaning of column data, with smart suggestions for field names, types, and primary keys</li>
+                                <li><strong>Reasoning Transparency:</strong> Detailed explanation for each field analysis and decision</li>
+                                <li><strong>Minimal User Intervention:</strong> Users only participate in critical steps, with the rest handled automatically</li>
                             </ul>
-                            <p>The video demonstrates how our system transforms raw CSV data into structured database records, establishing the foundation for subsequent knowledge extraction and analysis phases.</p>
                         </div>
                     </div>
                 </div>
@@ -315,13 +315,12 @@
                         </div>
                         <div class="video-explanation">
                             <h5>Automated Schema Design</h5>
-                            <p>This video illustrates the <strong>intelligent DDL generation</strong> component of our Database Information Processing Agent. The system employs advanced algorithms to:</p>
+                            <p>This video demonstrates how the <strong>Database Information Processing Agent</strong> generates DDL by analyzing table headers and sample values. For each column, the agent automatically infers its content, provides explanations, and incorporates user-specified sample values into the DDL. This enriched DDL information helps the Database Information Retrieval Agent better understand the table structure, enabling more accurate SQL generation for user queries.</p>
                             <ul>
-                                <li><strong>Data Type Inference:</strong> Automatic recognition of numeric, text, date, and boolean fields using statistical analysis and LLM understanding</li>
-                                <li><strong>Constraint Optimization:</strong> Intelligent recommendation of primary keys, foreign keys, and indexes for optimal query performance</li>
-                                <li><strong>Schema Validation:</strong> Comprehensive verification of generated schemas against data integrity requirements</li>
+                                <li><strong>Field Content Analysis:</strong> Automatic inference and explanation of each column's meaning based on headers and sample values</li>
+                                <li><strong>Sample Value Integration:</strong> User-specified examples are included in the DDL for richer context</li>
+                                <li><strong>Enhanced Retrieval:</strong> DDL is optimized to support downstream agents in query generation</li>
                             </ul>
-                            <p>The automated DDL generation eliminates manual database design overhead while ensuring optimal performance for subsequent SQL-based queries.</p>
                         </div>
                     </div>
                 </div>
@@ -344,14 +343,15 @@
                         </div>
                         <div class="video-explanation">
                             <h5>Context-Enhanced SQL Generation</h5>
-                            <p>This demonstration showcases the <strong>Database Information Retrieval Agent</strong> implementing our context-enhanced prompting strategy. The system demonstrates:</p>
+                            <blockquote class="user-question">
+  "Which sales representative has the highest customer satisfaction scores?"
+</blockquote>
+<p>In this demonstration, the user asks, "Which sales representative has the highest customer satisfaction scores?" The <strong>Database Retrieval Agent</strong> leverages historical QA data, DDL information, and domain-specific knowledge as retrieval-augmented generation (RAG) context to generate the appropriate SQL query and retrieve the data. The <strong>Database Analysis Agent</strong> then combines the query results and relevant domain knowledge to provide a detailed analysis and answer to the user's question.</p>
                             <ul>
-                                <li><strong>Historical QA Integration:</strong> Retrieval of similar historical queries and their corresponding SQL statements for context enhancement</li>
-                                <li><strong>Few-Shot Prompting:</strong> Dynamic selection of relevant examples to guide LLM SQL generation</li>
-                                <li><strong>Domain Knowledge Injection:</strong> Integration of business rules and domain-specific calculation formulas</li>
-                                <li><strong>Multi-source Information Fusion:</strong> Seamless combination of user queries, database schema, and external knowledge</li>
+                                <li><strong>RAG-based SQL Generation:</strong> Utilizes historical QA, DDL, and domain knowledge for context</li>
+                                <li><strong>Automated Data Retrieval:</strong> Generates and executes SQL to answer user queries</li>
+                                <li><strong>Expert Analysis:</strong> Analysis agent synthesizes results and knowledge for comprehensive answers</li>
                             </ul>
-                            <p>The video shows how our approach achieves superior accuracy compared to traditional methods by leveraging comprehensive contextual information.</p>
                         </div>
                     </div>
                 </div>
@@ -374,14 +374,15 @@
                         </div>
                         <div class="video-explanation">
                             <h5>Automated Chart Generation</h5>
-                            <p>This video demonstrates the <strong>Database Visualization Agent</strong> capabilities, showcasing our automated chart generation system. The process includes:</p>
+                            <blockquote class="user-question">
+                            "Create a chart showing monthly revenue trends across all regions"
+</blockquote>
+                            <p>This video demonstrates how, when a user requests "Create a chart showing monthly revenue trends across all regions," the <strong>Database Visualization Agent</strong> first determines whether a chart is needed and recommends the most suitable chart type if not specified. It then uses data provided by the Retrieval Agent to generate the chart, while the Analysis Agent offers an interpretation of the visualization. The process is fully automated, ensuring users receive both visual and analytical insights with minimal effort.</p>
                             <ul>
-                                <li><strong>User Intent Analysis:</strong> LLM-based understanding of visualization requirements from natural language queries</li>
-                                <li><strong>Chart Type Selection:</strong> Intelligent determination of appropriate visualization types (trends, distributions, comparisons)</li>
-                                <li><strong>Python Code Generation:</strong> Automated generation of plotting code using libraries like matplotlib and seaborn</li>
-                                <li><strong>Interactive Display:</strong> Web-based presentation with interactive exploration capabilities</li>
+                                <li><strong>Intent Recognition:</strong> Detects user needs for visualization and recommends chart types automatically</li>
+                                <li><strong>Data-Driven Plotting:</strong> Uses retrieved data to generate appropriate charts</li>
+                                <li><strong>Insightful Analysis:</strong> Analysis agent provides explanations and insights for each visualization</li>
                             </ul>
-                            <p>The system transforms complex analytical results into intuitive visual representations, enhancing user understanding and data exploration.</p>
                         </div>
                     </div>
                 </div>
@@ -404,14 +405,12 @@
                         </div>
                         <div class="video-explanation">
                             <h5>Data-to-Knowledge Graph Transformation</h5>
-                            <p>This demonstration showcases our core innovation: the <strong>Knowledge Graph Information Processing Agent</strong> implementing the automated "data-to-knowledge graph" transformation algorithm. The process follows our formalized mapping function:</p>
+                            <p>This demonstration presents how the <strong>Knowledge Graph Information Processing Agent</strong> transforms structured database tables into relational knowledge graphs. The agent reads table DDL, header information, and sample data, then applies algorithm-defined transformation rules to determine which columns become entities (including splitting multi-valued cells), and how entities are related. Logical and semantic relationship patterns are used to associate entities, and the resulting graph is stored in a knowledge graph database. This process enables downstream relational analysis that goes beyond traditional structured queries.</p>
                             <ul>
-                                <li><strong>Entity Construction:</strong> Implementation of entity identifier generation and split-based entity construction strategies</li>
-                                <li><strong>Relationship Discovery:</strong> Intra-row and cross-row relationship matching using multi-pattern rule evaluation</li>
-                                <li><strong>LLM-based Strategy Generation:</strong> One-time semantic analysis for entity type and relationship pattern definition</li>
-                                <li><strong>Parallel Graph Construction:</strong> Efficient in-memory computation with batch persistence to Neo4j</li>
+                                <li><strong>Entity Construction:</strong> Identifies entity columns, handles multi-valued cells, and generates unique entity identifiers</li>
+                                <li><strong>Relationship Discovery:</strong> Defines and applies logical/semantic rules to associate entities</li>
+                                <li><strong>Graph Storage:</strong> Persists the resulting knowledge graph for advanced relational retrieval and analysis</li>
                             </ul>
-                            <p>The video demonstrates how flat tabular data is transformed into semantically rich relational networks supporting complex reasoning tasks.</p>
                         </div>
                     </div>
                 </div>
@@ -434,14 +433,12 @@
                         </div>
                         <div class="video-explanation">
                             <h5>Interactive Graph Exploration</h5>
-                            <p>This video demonstrates the <strong>Knowledge Graph Visualization Agent</strong> capabilities, showcasing interactive knowledge graph exploration and analysis. The system provides:</p>
+                            <p>This video demonstrates the knowledge graph visualization interface, which allows users to intuitively explore the internal relationships within the transformed knowledge graph. The interface displays all node types, relationship types, node properties, and their associations. Users can drag, browse, and filter the graph to gain a clear understanding of the data's relational structure.</p>
                             <ul>
-                                <li><strong>Dynamic Subgraph Generation:</strong> Real-time creation of knowledge graph subgraphs based on query results</li>
-                                <li><strong>Interactive Navigation:</strong> User-friendly exploration of entity relationships and network structures</li>
-                                <li><strong>Visual Pattern Recognition:</strong> Intuitive display of collaboration networks and semantic relationships</li>
-                                <li><strong>Web-based Interface:</strong> Seamless integration with the overall platform for enhanced user experience</li>
+                                <li><strong>Comprehensive Visualization:</strong> Shows all node types, relationships, and properties</li>
+                                <li><strong>Interactive Exploration:</strong> Supports drag-and-drop navigation and filtering</li>
+                                <li><strong>Relationship Clarity:</strong> Helps users intuitively understand data associations</li>
                             </ul>
-                            <p>The visualization capabilities enable users to discover hidden patterns and relationships that are difficult to identify through traditional data analysis methods.</p>
                         </div>
                     </div>
                 </div>
@@ -464,14 +461,15 @@
                         </div>
                         <div class="video-explanation">
                             <h5>Complex Relational Reasoning</h5>
-                            <p>This demonstration showcases the <strong>Knowledge Graph Information Retrieval Agent</strong> performing complex reasoning through Cypher-based graph queries. The system demonstrates:</p>
+                            <blockquote class="user-question">
+  "Map the technology stack relationships in our active projects and identify skill dependencies."
+</blockquote>
+<p>In this demonstration, the user asks, "Map the technology stack relationships in our active projects and identify skill dependencies." The <strong>Knowledge Graph Retrieval Agent</strong> uses the graph schema, historical QA, and domain-specific knowledge as RAG context to generate Cypher queries and retrieve relevant subgraphs. The <strong>Knowledge Graph Analysis Agent</strong> then analyzes the subgraph and, together with domain knowledge, provides insights into the relationships of interest. The <strong>Knowledge Graph Visualization Agent</strong> displays the subgraph below the answer, supporting drag-and-drop interaction and showing node properties for enhanced interpretability and user experience.</p>
                             <ul>
-                                <li><strong>Multi-hop Path Planning:</strong> Intelligent traversal of complex relationship networks for multi-step reasoning</li>
-                                <li><strong>Context-Enhanced Cypher Generation:</strong> Integration of graph schema, few-shot examples, and external knowledge</li>
-                                <li><strong>Semantic Relationship Discovery:</strong> Identification of indirect associations and hidden connections between entities</li>
-                                <li><strong>Pattern Matching:</strong> Advanced graph query capabilities for discovering complex collaboration patterns</li>
+                                <li><strong>RAG-based Cypher Generation:</strong> Utilizes schema, historical QA, and domain knowledge for context</li>
+                                <li><strong>Subgraph Retrieval:</strong> Generates and executes Cypher to answer relational queries</li>
+                                <li><strong>Visual Explanation:</strong> Presents subgraphs interactively with node property details</li>
                             </ul>
-                            <p>The video illustrates how our knowledge graph approach enables sophisticated reasoning that goes beyond simple structured data queries.</p>
                         </div>
                     </div>
                 </div>
@@ -494,14 +492,17 @@
                         </div>
                         <div class="video-explanation">
                             <h5>Coordinated Team Orchestration</h5>
-                            <p>This final demonstration showcases the <strong>Data Leader</strong> orchestrating the complete multi-agent collaboration using the ReAct paradigm. The video illustrates:</p>
+                            <blockquote class="user-question">
+  "Analyze our project delivery capacity by correlating team skills, project complexity, and historical performance - what are our optimization opportunities?"
+</blockquote>
+<p>This final demonstration showcases the <strong>Data Leader</strong> orchestrating complete multi-agent collaboration using the ReAct paradigm. The user asks, "Analyze our project delivery capacity by correlating team skills, project complexity, and historical performance - what are our optimization opportunities?" The Data Leader Agent dynamically coordinates the Database and Knowledge Graph teams, integrating both structural and relational information through a three-stage iterative process. The interface displays the entire interaction between the leader and both teams, making the full workflow transparent and traceable, which enhances user trust and understanding.</p>
                             <ul>
                                 <li><strong>Three-Stage Principle:</strong> Implementation of "explore-verify-analyze" methodology for complex query decomposition</li>
                                 <li><strong>Dynamic Team Dispatch:</strong> Intelligent delegation between Database Team and Knowledge Graph Team based on task requirements</li>
                                 <li><strong>Iterative Reasoning:</strong> ReAct cycle implementation with thought-action-observation phases</li>
                                 <li><strong>Comprehensive Synthesis:</strong> Integration of multi-source information for final answer generation</li>
+                                <li><strong>Full Process Transparency:</strong> All agent interactions are visible and traceable for the user</li>
                             </ul>
-                            <p>The video demonstrates how our tripartite architecture achieves superior performance through specialized team coordination and intelligent task decomposition.</p>
                         </div>
                     </div>
                 </div>
