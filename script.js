@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScrolling();
     initLoadingAnimations();
     initInteractiveElements();
+    initBibtexCopy();
 });
 
 // Navbar functionality
@@ -153,6 +154,34 @@ function initInteractiveElements() {
         item.addEventListener('mouseleave', function() {
             this.style.transform = 'translateX(0)';
         });
+    });
+}
+
+function initBibtexCopy() {
+    const copyBtn = document.getElementById('copy-bibtex-btn');
+    const bibtexEntry = document.getElementById('bibtex-entry');
+
+    if (!copyBtn || !bibtexEntry) {
+        return;
+    }
+
+    copyBtn.addEventListener('click', async function() {
+        const originalHtml = copyBtn.innerHTML;
+
+        try {
+            await navigator.clipboard.writeText(bibtexEntry.textContent);
+            copyBtn.classList.add('copied');
+            copyBtn.innerHTML = '<i class="fas fa-check me-1"></i>Copied';
+            setTimeout(() => {
+                copyBtn.classList.remove('copied');
+                copyBtn.innerHTML = originalHtml;
+            }, 1600);
+        } catch (error) {
+            copyBtn.innerHTML = '<i class="fas fa-times me-1"></i>Failed';
+            setTimeout(() => {
+                copyBtn.innerHTML = originalHtml;
+            }, 1600);
+        }
     });
 }
 
